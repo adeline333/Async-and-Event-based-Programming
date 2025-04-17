@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Promise Test</title>
+</head>
+<body>
+  <script>
+    // Your promise code here
+    let pizzaOrder = new Promise(function(resolve, reject) {
+      let isPizzaReady = true;
+
+      if (isPizzaReady) {
+        resolve("Your pizza is here! 🍕");
+      } else {
+        reject("No pizza for you 😢");
+      }
+    });
+
+    pizzaOrder
+      .then(function(message) {
+        console.log("Success:", message);
+      })
+      .catch(function(error) {
+        console.log("Error:", error);
+      });
+  </script>
+</body>
+</html>
